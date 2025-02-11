@@ -1,4 +1,8 @@
 #include "Game.hpp"
+#include "TextureManager.hpp"
+
+SDL_Texture* playerTex;
+SDL_Rect* srcR, destR;
 
 Game::Game() {}
 
@@ -25,6 +29,8 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         }
 
         isRunning = true;
+
+        playerTex = TextureManager::LoadTexture("assets/player.png", renderer);
     }
     else {
         isRunning = false;
@@ -46,7 +52,12 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
+    cnt++;
+    destR.h = 64;
+    destR.w = 64;
+    destR.x = cnt;
 
+    std::cout << cnt << std::endl;
 }
 
 void Game::render() {
