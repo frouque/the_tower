@@ -11,10 +11,10 @@ OBJ_FILES = $(SRCS:.cpp=.o)
 all: main
 
 main: $(OBJ_FILES)
-	$(CXX) $(CXXFLAGS) $(OBJ_FILES) $(LDFLAGS) -o main
+	$(CXX) $(CXXFLAGS) $(OBJ_FILES) $(LDFLAGS) -o main.exe
 
 %.o: %.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f main $(SRC_DIR)/*.o
+	rm -f main.exe $(SRC_DIR)/*.o
