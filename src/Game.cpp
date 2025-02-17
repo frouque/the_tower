@@ -38,6 +38,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         map = new Map();
     }
     else {
+        std::cout << "SDL_Init failed: " << SDL_GetError() << std::endl;
         isRunning = false;
     }
 }

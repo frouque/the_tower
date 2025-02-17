@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -Wall -std=c++11 -I$(HOME)/SDL/include -I/usr/local/include -Isrc
-LDFLAGS = -L$(HOME)/SDL/lib -L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf -lenet \
+LDFLAGS = -L$(HOME)/SDL/lib -L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf \
           -Wl,-rpath,$(HOME)/SDL/lib -Wl,-rpath,/usr/local/lib
 
 SRC_DIR = src
